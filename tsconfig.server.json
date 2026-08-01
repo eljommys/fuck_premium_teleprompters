@@ -1,0 +1,23 @@
+{
+  // Compila el servidor a JavaScript en `dist/`.
+  //
+  // Hace falta porque Node se niega a quitar los tipos de un fichero .ts que
+  // esté dentro de node_modules, que es justo donde acaba el paquete al
+  // instalarlo con npx. En desarrollo se sigue ejecutando `server.ts` directo;
+  // esto es solo para poder distribuirlo.
+  //
+  // Se hereda la resolución de módulos de la base a propósito: con `nodenext`,
+  // el import por defecto de `next` deja de considerarse invocable.
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "noEmit": false,
+    "outDir": "dist",
+    "rootDir": ".",
+    // El código fuente importa con extensión .ts para que Node lo ejecute tal
+    // cual; al emitir hay que reescribirla a .js o el import fallaría.
+    "rewriteRelativeImportExtensions": true,
+    "incremental": false,
+    "plugins": []
+  },
+  "include": ["server.ts", "lib/state.ts", "lib/network.ts"]
+}

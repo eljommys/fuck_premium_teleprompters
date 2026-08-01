@@ -46,3 +46,6 @@ state.json
 # Estado apartado o a medio escribir
 state.json.bak
 state.json.tmp
+
+# servidor compilado
+/dist/

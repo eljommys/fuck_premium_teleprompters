@@ -17,11 +17,14 @@ import { localAddresses } from "./lib/network.ts";
 const PORT = Number(process.env.PORT ?? 3000);
 const DEV = process.env.NODE_ENV !== "production";
 /**
- * La aplicación de Next vive junto a este fichero, no en el directorio desde el
- * que se lanza: al ejecutarlo con `npx` el paquete está en la caché de npm y el
- * directorio actual es cualquier otro.
+ * La aplicación de Next vive junto al código del servidor, no en el directorio
+ * desde el que se lanza: al ejecutarlo con `npx` el paquete está en la caché de
+ * npm y el directorio actual es cualquier otro.
+ *
+ * En desarrollo esto es la raíz del proyecto. Distribuido, el servidor corre
+ * compilado desde `dist/`, así que el lanzador le pasa la raíz del paquete.
  */
-const APP_DIR = import.meta.dirname;
+const APP_DIR = process.env.TELEPROMPTER_APP_DIR ?? import.meta.dirname;
 /**
  * El guion, en cambio, sí se guarda donde lo lanzas. Así cada carpeta tiene el
  * suyo y no se pierde al vaciarse la caché de npx.

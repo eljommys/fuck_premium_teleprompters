@@ -14,7 +14,9 @@ import { join, resolve } from "node:path";
 
 const PACKAGE_DIR = resolve(import.meta.dirname, "..");
 
-if (existsSync(join(PACKAGE_DIR, ".next"))) process.exit(0);
+const listo =
+  existsSync(join(PACKAGE_DIR, ".next")) && existsSync(join(PACKAGE_DIR, "dist", "server.js"));
+if (listo) process.exit(0);
 
 const build = spawnSync("npm", ["run", "build"], { cwd: PACKAGE_DIR, stdio: "inherit" });
 process.exit(build.status ?? 1);
