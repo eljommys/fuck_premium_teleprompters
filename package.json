@@ -1,0 +1,62 @@
+{
+  "name": "fuck_premium_teleprompters",
+  "version": "0.1.0",
+  "description": "Teleprompter en red local: editor en el Mac, visor en el iPad, mando en el móvil. Sin cuota, sin cuenta, sin nube.",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "fuck_premium_teleprompters": "bin/start.mjs"
+  },
+  "engines": {
+    "node": ">=22.18"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eljommys/fuck_premium_teleprompters.git"
+  },
+  "homepage": "https://github.com/eljommys/fuck_premium_teleprompters#readme",
+  "keywords": [
+    "teleprompter",
+    "prompter",
+    "ipad",
+    "local-network",
+    "self-hosted"
+  ],
+  "files": [
+    ".next",
+    "app",
+    "bin",
+    "components",
+    "lib",
+    "public",
+    "server.ts",
+    "next.config.ts",
+    "postcss.config.mjs",
+    "tsconfig.json",
+    "README.md"
+  ],
+  "scripts": {
+    "dev": "node server.ts",
+    "build": "next build",
+    "start": "NODE_ENV=production node server.ts",
+    "typecheck": "tsc --noEmit",
+    "prepare": "node bin/prepare.mjs"
+  },
+  "dependencies": {
+    "next": "16.2.12",
+    "qrcode": "^1.5.4",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "ws": "^8.21.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/qrcode": "^1.5.6",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@types/ws": "^8.18.1",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}
