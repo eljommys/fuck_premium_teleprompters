@@ -1,0 +1,23 @@
+# Qué NO meter en el paquete publicado.
+#
+# La lista de lo que SÍ entra está en el campo "files" de package.json. Aquí
+# solo se podan cosas de dentro de esas carpetas.
+#
+# Este fichero existe además porque, sin él, npm usaría .gitignore para podar,
+# y allí están ignorados .next y dist —que son justamente lo que hay que
+# publicar, porque al instalar desde el registro npm no construye nada.
+
+# Caché de Turbopack en desarrollo: cientos de megas que no pintan nada en
+# producción y que se regeneran solas al ejecutar `npm run dev`.
+.next/dev
+.next/cache
+
+# Mapas de fuentes y tipos: solo sirven al desarrollar.
+.next/types
+.next/trace
+**/*.map
+
+# El guion, que es de quien use el programa y no del paquete.
+state.json
+state.json.bak
+state.json.tmp

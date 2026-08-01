@@ -10,11 +10,11 @@ Sin cuota, sin cuenta, sin marca de agua y sin nube: el guion no sale de tu Wi-F
 Sin instalar nada:
 
 ```bash
-npx github:eljommys/fuck_premium_teleprompters
+npx fuck_premium_teleprompters
 ```
 
-La primera vez tarda un poco porque se descarga y se construye; las siguientes
-arranca al momento. Necesita **Node 22.18 o superior**.
+Necesita **Node 20.19 o superior**. El paquete viene ya construido, así que
+arranca en unos segundos.
 
 Al arrancar imprime las direcciones de la red local. Abre la de `localhost` en el
 Mac: la página de inicio trae los códigos QR del visor y del mando para abrirlos
@@ -23,7 +23,7 @@ en el iPad y el móvil sin teclear nada.
 El guion se guarda en un `state.json` **en la carpeta desde la que lanzas el
 comando**, así que cada proyecto puede tener el suyo.
 
-El puerto es el 3000; se cambia con `PORT=4000 npx github:eljommys/fuck_premium_teleprompters`.
+El puerto es el 3000; se cambia con `PORT=4000 npx fuck_premium_teleprompters`.
 
 ### Desde el código
 
