@@ -1,11 +1,11 @@
 {
-  "name": "fuck_premium_teleprompters",
+  "name": "fck-premium-teleprompters",
   "version": "0.1.0",
   "description": "Teleprompter en red local: editor en el Mac, visor en el iPad, mando en el móvil. Sin cuota, sin cuenta, sin nube.",
   "license": "MIT",
   "type": "module",
   "bin": {
-    "fuck_premium_teleprompters": "bin/start.mjs"
+    "fck-premium-teleprompters": "bin/start.mjs"
   },
   "engines": {
     "node": ">=20.19"

@@ -10,8 +10,12 @@ Sin cuota, sin cuenta, sin marca de agua y sin nube: el guion no sale de tu Wi-F
 Sin instalar nada:
 
 ```bash
-npx fuck_premium_teleprompters
+npx fck-premium-teleprompters
 ```
+
+Sí, falta una letra. El registro de npm tiene un filtro de palabrotas y devuelve
+*«That word is not allowed»* al publicar, así que ahí el paquete va censurado.
+En todo lo demás el nombre se queda como estaba.
 
 Necesita **Node 20.19 o superior**. El paquete viene ya construido, así que
 arranca en unos segundos.
@@ -23,7 +27,7 @@ en el iPad y el móvil sin teclear nada.
 El guion se guarda en un `state.json` **en la carpeta desde la que lanzas el
 comando**, así que cada proyecto puede tener el suyo.
 
-El puerto es el 3000; se cambia con `PORT=4000 npx fuck_premium_teleprompters`.
+El puerto es el 3000; se cambia con `PORT=4000 npx fck-premium-teleprompters`.
 
 ### Desde el código
 
